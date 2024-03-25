@@ -1,3 +1,0 @@
-# AfriMed Backend
-
-## Introduction
