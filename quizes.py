@@ -8,7 +8,7 @@ app = FastAPI()
     # age: int 
     # stress_level: str 
     
-@app.get('/user/<username>')
+@app.post('/user')
 async def get_user(name:str, age:int, stress_level:str):
     return {
         "username": name, 
