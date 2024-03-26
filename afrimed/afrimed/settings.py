@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Add our app
-    'patient',
     'rest_framework',
     'corsheaders',
     'medicapi',
