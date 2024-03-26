@@ -5,6 +5,68 @@ from random import randrange
 
 app = FastAPI()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# --------------------------------
+"""_module_name_
+    Educational Content Module.
+"""
 class Post(BaseModel):
     title: str 
     content: str 
@@ -26,7 +88,6 @@ def find_index_post(id):
     for i, p in enumerate(my_list):
         if p['id'] == id:
             return i
-
 
 # Get all posts
 @app.get('/posts')
@@ -77,5 +138,11 @@ async def update_post(id: int, post: Post):
     post_dict['id'] = id
     my_list[indx] = post_dict
     return {"message": f"Post with ID {id} successfully updated!"}
+
+
+# --------------------------------
+"""_module_name_
+    Quiz Module.
+"""
 
 
