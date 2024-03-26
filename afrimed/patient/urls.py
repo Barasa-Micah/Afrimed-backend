@@ -4,5 +4,5 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.getData),
-    path('post/', views.postData),
+    #path('post/', views.postData),
 ]
