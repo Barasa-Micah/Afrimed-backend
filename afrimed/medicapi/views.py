@@ -11,3 +11,8 @@ def hello_medics(request):
 @api_view(['GET'])
 def view_users(request):
     return Response({'name': 'user'})
+
+@api_view
+def register_medic():
+    pass
+    #return Response({})
