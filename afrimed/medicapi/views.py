@@ -6,7 +6,7 @@ from rest_framework.response import Response
 # Create your views here.
 @api_view(['GET'])
 def hello_medics(request):
-    return Response({'message': 'Hello medics'})
+    return Response({'message': 'Hello medic'})
 
 @api_view(['GET'])
 def view_users(request):
