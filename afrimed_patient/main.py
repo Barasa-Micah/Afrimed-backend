@@ -26,3 +26,10 @@ def login(request: Request):
     return templates.TemplateResponse(
         "signin.html", {"request": request}
     )
+    
+@app.get("/user/signup")
+def signup(request: Request):
+    return templates.TemplateResponse(
+        "signup.html", {"request": request}
+    )
+
