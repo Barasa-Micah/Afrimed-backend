@@ -1,7 +1,7 @@
 from django.db import models
 
-
-# Create your models here.
-class Data(models.Model):
-    name = models.CharField(max_length=200)
-    description = models.CharField(max_length=500)
+class Menu(models.Model):
+    name = models.CharField(max_length=255)
+    score = models.FloatField()
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
