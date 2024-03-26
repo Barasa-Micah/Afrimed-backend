@@ -1,8 +1,8 @@
-from django.urls import include, path
-
+from django.urls import path
 from . import views
+from django.conf import settings
 
 urlpatterns = [
-    # path('patient/', include('patient.urls'))
-    path("", views.index, name="index"),
+    path('', views.getData),
+    path('post/', views.postData),
 ]
