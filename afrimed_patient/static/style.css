@@ -13,3 +13,23 @@
         height: 100%;
     }
 }
+.col-1 {
+    position: fixed;
+    width: 50%;
+    left: 0;
+    height: auto;
+    z-index: 1010101010
+  }
+  
+.col-2 {
+    position: fixed;
+    width: 50%;
+    left: 50%;
+    height: auto;
+    z-index: 1010101010
+  }
+ /* Style the image inside the centered container, if needed */
+.centered img {
+    width: 650px;
+    border-radius: 50%;
+  }
