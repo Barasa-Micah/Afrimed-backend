@@ -33,3 +33,8 @@ def signup(request: Request):
         "signup.html", {"request": request}
     )
 
+@app.get("/contact")
+def contact(request: Request):
+    return templates.TemplateResponse(
+        "contact.html", {"request": request}
+    )
