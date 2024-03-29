@@ -7,7 +7,6 @@ from forms import UserCreateForm
 
 
 templates = Jinja2Templates(directory="templates")
-
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static", html=True), name="static")
 
@@ -30,30 +29,30 @@ async def home(request: Request):
         "about.html", {"request": request}
     )
     
-# @app.get("/user/signin")
-# async def login(request: Request):
-#     return templates.TemplateResponse(
-#         "signin.html", {"request": request}
-#     )
+@app.get("/user/signin")
+async def login(request: Request):
+    return templates.TemplateResponse(
+        "signin.html", {"request": request}
+    )
     
-# @app.get("/user/signup")
-# async def signup(request: Request):
-#     form = UserCreateForm(request)
-#     await form.load_data()
-#     print("submitted successfully")
-#     if await form.is_valid():
-#         # errors = ["Save to database"]
-#         print("signup successfully")
-#     else:
-#         print("Error Form")
-#         # errors = form.errors
+@app.get("/user/signup")
+async def signup(request: Request):
+    form = UserCreateForm(request)
+    await form.load_data()
+    print("submitted successfully")
+    if await form.is_valid():
+        # errors = ["Save to database"]
+        print("signup successfully")
+    else:
+        print("Error Form")
+        # errors = form.errors
     
-#     return templates.TemplateResponse(
-#         "signup.html", {
-#             "request": request,
-#             # "errors": errors
-#             }
-#     )
+    return templates.TemplateResponse(
+        "signup.html", {
+            "request": request,
+            # "errors": errors
+            }
+    )
 
 @app.get("/symptom_tracker")
 async def symptom_tracker(request: Request):
@@ -68,4 +67,7 @@ async def edu_resource(request: Request):
     return templates.TemplateResponse(
         "edu_resource.html", {"request": request}
     )
+    
+    
+    
     
