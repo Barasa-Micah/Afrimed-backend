@@ -35,19 +35,20 @@
         padding: 20px;
       }
     </style>
+
 <section class="destinations">
     <h3 class="title">Track your Cardiovascular Sypmtoms</h3>
     <p>Select details below: </p>
     <div>
-        <form action="/action_page.php">
-          <label for="country">Daignosis Status</label>
-          <select id="country" name="country">
-            <option value="diagnosed">Diagnosed</option>
-            <option value="not_diagnosed">Not Diagnosed</option>
+        <form method="POST" action="">
+          <label for="status">Diagnosis Status</label>
+          <select id="status" name="status">
+            <option id="diagnosed" value="diagnosed">Diagnosed</option>
+            <option id="not_diagnosed" value="not_diagnosed">Not Diagnosed</option>
             <option value="unsure">Unsure</option>
           </select><br /><br />
-          <label for="country">Daignosis Result</label>
-          
+          <!--label for="country">Daignosis Result</label>
+
           <h3>Select symptoms that you have experienced</h3>
             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
             <label for="chest_pain"> Chest pain</label><br>
@@ -62,7 +63,7 @@
             <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
             <label for="fatigue"> Fatigue</label><br>
             <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-            <label for="swollen_limbs"> Swollen limbs</label><br><br>
+            <label for="swollen_limbs"> Swollen limbs</label><br><br-->
           <input type="submit" value="Submit">
         </form>
       </div>
