@@ -1,16 +1,16 @@
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from rest_framework import viewsets
+from .models import Medics
 
 # Create your views here.
 @api_view(['GET'])
 def hello_medics(request):
     return Response({'message': 'Hello medic'})
 
-@api_view(['GET'])
-def view_users(request):
-    return Response({'name': 'user'})
+class MedicViewSet(viewsets.ModelViewSet):
+    queryset = Medics.objects.all()
 
 @api_view
 def register_medic():
