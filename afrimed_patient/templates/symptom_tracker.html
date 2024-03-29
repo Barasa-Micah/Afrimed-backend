@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Symptom Tracker{% endblock %}
+
+{% block content %}
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      
+      input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      
+      div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+    </style>
+<section class="destinations">
+    <h3 class="title">Track your Cardiovascular Sypmtoms</h3>
+    <p>Select details below: </p>
+    <div>
+        <form action="/action_page.php">
+          <label for="country">Daignosis Status</label>
+          <select id="country" name="country">
+            <option value="diagnosed">Diagnosed</option>
+            <option value="not_diagnosed">Not Diagnosed</option>
+            <option value="unsure">Unsure</option>
+          </select><br /><br />
+          <label for="country">Daignosis Result</label>
+          <select id="country" name="country">
+            <option value="positive">Positive</option>
+            <option value="negative">Negative</option>
+            <option value="unsure_result">Unsure</option>
+          </select><br /><br />
+          <h3>Select symptoms that you have experienced</h3>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="chest_pain"> Chest pain</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="pain_weak"> Pain, weakness or numb legs and/or arms</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="breathlessness"> Breathlessness</label><br>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="slow_heartbeat"> Very fast or slow heartbeat, or palpitations</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="dizzy"> Feeling dizzy</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="fatigue"> Fatigue</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="swollen_limbs"> Swollen limbs</label><br><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    <hr>
+  </section>
+  
+
+  <footer>
+    <p>@Copyright <a href="http://unsplash.com/">Afrimed</a>.</p>
+    <p>Why are you even reading this?! There's never anything interesting in the footer!</p>
+    <ul>
+      <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+      <li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+      <li><a href="#"><i class="fa fa-snapchat-square fa-2x"></i></a></li>
+    </ul>
+  </footer>
+{% endblock %}
