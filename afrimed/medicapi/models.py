@@ -7,6 +7,7 @@ class Medics(models.Model):
     medical_licence_number = models.IntegerField()
     place_of_practice = models.TextField()
     age = models.IntegerField()
+    gender = models.BinaryField("M", "F")
 
     def __str__(self) -> str:
         return self.name
